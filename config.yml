@@ -1,0 +1,16 @@
+baseURL: http://itscd.xyz
+languageCode: en-us
+title: Miguel Diaz
+
+params:
+  defaultTheme: dark
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowShareButtons: true
+  homeInfoParams:
+    Title: Hi!
+    Content: I'm a Backend developer that works on blockchain rather frequently
+
+  socialIcons:
+    - name: "github"
+      url: "https://github.com/aguxez"
