@@ -4,7 +4,9 @@ date: 2022-05-01T21:40:46-05:00
 draft: false
 ---
 
-#### Repo link at the bottom
+EIP712 is a great way to validate off-chain signatures in smart contracts with some centralization compromise.
+
+**Repo link at the bottom.**
 
 Quoting from the official proposal [here](https://eips.ethereum.org/EIPS/eip-712)
 
@@ -42,7 +44,7 @@ function giveReward(uint256 i, uint256 level, uint256 reward, address signer, by
 function isValidSignature(...params) internal view returns (bool) {
     bytes32 digest = _hashTypedDataV4(keccak245(params));
 
-    return ECDS.recover(digest, signature) == signer
+    return ECDSA.recover(digest, signature) == signer
 }
 ```
 
@@ -60,4 +62,4 @@ On top of that, the example I've provided has several flaws.
 
 You can even go one step further and combine 2 and 3 with a rolling address queue. Multiple addresses can create signatures but only the address at the head of the queue can execute the next one.
 
-**Treat all the code in this post as non-working examples. A working (vulnerable) repo can be seen [here](https://github.com/aguxez/eip712-verifier)**
+**Treat all the code in this post as non-working examples. A working (vulnerable) repo can be seen [here](https://github.com/aguxez/eip712-verifier).**
