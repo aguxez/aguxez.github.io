@@ -1,7 +1,7 @@
 ---
 title: Simple EIP712 Verifier
 date: 2022-05-01T21:40:46-05:00
-draft: true
+draft: false
 ---
 
 #### Repo link at the bottom
